@@ -4,6 +4,8 @@ Découvrir la [CSFML](https://www.sfml-dev.org/index-fr.php) à travers un sideS
 ### Effet Parallax
 manque la repetition de background  
 
+
+### Compiler
 ```
 $ gcc *.c -lcsfml-graphics -lcsfml-window
 ```
