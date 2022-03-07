@@ -35,7 +35,6 @@ void Initialize(struct Entity entities[])
     // add the update funtction to the background
     for (int i = 0; i < 3; i++)
     {
-
         entities[i].Update = Update_backgrounds;
     }
 
@@ -45,7 +44,6 @@ void Initialize(struct Entity entities[])
 
 void Update(struct Entity entities[], sfView *view)
 {
-
     if (keyPressed(sfKeyD))
     {
         sfVector2f newPos = {entities[3].speed, 0};
@@ -59,7 +57,6 @@ void Update(struct Entity entities[], sfView *view)
     {
         entities[i].Update(entities[i].sprite, &entities[i].position, &entities[i].speed, &entities[i].scale);
     }
-
 }
 
 void Draw(sfRenderWindow *window, Array_Entity *entities, sfView *view)
