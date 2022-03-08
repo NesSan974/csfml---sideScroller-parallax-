@@ -50,7 +50,7 @@ typedef struct Game
     void (*Update)();
     void (*Draw)();
 
-    Array_Entity entities[];
+    Array_Entity entities;
 
 } Game;
 

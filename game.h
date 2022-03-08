@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.h>
 
-void Initialize(struct Entity entities[]);
+void Initialize(Array_Entity *);
 void Update(struct Entity entities[], sfView *view);
 void Draw(sfRenderWindow *window, Array_Entity *entities, sfView *view);
 

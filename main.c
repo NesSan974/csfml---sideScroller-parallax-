@@ -9,9 +9,8 @@
 
 int main(int argc, char const *argv[])
 {
-    Game *game = malloc(sizeof(Game) + 4 * sizeof(Entity));
-
-    game->entities->size = 10;
+    Game *game = malloc(sizeof(Game) + sizeof(Array_Entity) + 10 * sizeof(Entity));
+    game->entities.size = 10;
 
     game->Initialize = Initialize;
     game->Update = Update;
@@ -24,17 +23,15 @@ int main(int argc, char const *argv[])
     sfView_setSize(view, scale);
     sfVector2f vector_Null = {0,0};
 
-    game->Initialize(game->entities->array);
-
-    // game = realloc(game, sizeof(Game) + 5 * sizeof(Entity) ); //marche pas
+    game->Initialize(&game->entities);
 
     while (sfRenderWindow_isOpen(main_window.renderWindow))
     {
-        game->Update(game->entities->array, view);
+        game->Update(game->entities.array, view);
 
         HandleInput(main_window.renderWindow);
 
-        game->Draw(main_window.renderWindow, game->entities, view);
+        game->Draw(main_window.renderWindow, &game->entities, view);
     }
 
     return 0;

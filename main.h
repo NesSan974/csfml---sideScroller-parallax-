@@ -7,7 +7,7 @@
 struct Window CreateWindow(sfVector2f scale, char *title);
 sfSprite *createSprite(char *url);
 
-Entity Create_Entity(char *_url);
+Entity Create_Entity(char *_url, Array_Entity *array_entity);
 Entity Create_player();
 
 sfBool keyPressed(sfKeyCode);

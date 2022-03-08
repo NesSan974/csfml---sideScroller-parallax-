@@ -14,4 +14,10 @@ void Update_backgrounds(sfSprite *sprite, sfVector2f *position, float *speed, sf
         sfSprite_move(sprite, move );
         *position = sfSprite_getPosition(sprite);
     }
+    if (keyPressed(sfKeyQ))
+    {
+        sfVector2f move = {- *speed , 0};
+        sfSprite_move(sprite, move );
+        *position = sfSprite_getPosition(sprite);
+    }
 }
